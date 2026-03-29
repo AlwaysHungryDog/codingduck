@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>코딩덕 - 코딩하는 오리</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- 스크롤 프로그레스 바 -->
+  <div id="scrollProgress"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="duck-icon-small">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="24" cy="30" rx="14" ry="10" fill="#FFD700"/>
+            <circle cx="24" cy="18" r="9" fill="#FFD700"/>
+            <ellipse cx="28" cy="30" rx="6" ry="3" fill="#FFC200" transform="rotate(-10 28 30)"/>
+            <path d="M30 17 Q36 15 34 21 Q30 20 30 17Z" fill="#FF8C00"/>
+            <circle cx="21" cy="16" r="1.5" fill="#1a1a1a"/>
+            <circle cx="21.5" cy="15.5" r="0.5" fill="white"/>
+          </svg>
+        </div>
+        <span class="logo-text">코딩덕</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">소개</a></li>
+        <li><a href="#ai-backend">AI 시대</a></li>
+        <li><a href="#programs">강의 과정</a></li>
+        <li><a href="#quiz">적성 체크</a></li>
+        <li><a href="#testimonials">수강생 이야기</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">🎓 IT 교육의 새로운 기준</div>
+        <h1 class="hero-title">
+          코딩,<br />
+          <span class="highlight">재미있게</span> 배우자!
+        </h1>
+        <p class="hero-desc">
+          코딩덕은 취업을 꿈꾸는 분들을 위한<br />
+          백엔드 중심 IT 교육 플랫폼입니다.
+        </p>
+        <div class="hero-btns">
+          <a href="#programs" class="btn btn-primary">강의 과정 둘러보기</a>
+          <a href="#quiz" class="btn btn-outline">적성 체크해보기</a>
+        </div>
+        <div class="hero-keyboard-hint">
+          <span class="kbd-keys">
+            <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>
+            <span class="kbd-sep">또는</span>
+            <kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd>
+          </span>
+          <span class="kbd-desc">키를 누르면 오리 탐험이 바로 시작됩니다 🦆</span>
+        </div>
+      </div>
+      <div class="hero-mascot" id="heroMascot" title="클릭하면 오리 탐험 시작!">
+        <div class="mascot-click-hint">클릭해서 탐험!</div>
+        <div class="mascot-wrapper">
+          <div class="mascot-glow"></div>
+          <svg class="duck-mascot" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="100" cy="150" rx="58" ry="48" fill="#FFD700"/>
+            <ellipse cx="125" cy="155" rx="28" ry="16" fill="#FFC200" transform="rotate(-15 125 155)"/>
+            <circle cx="100" cy="88" r="42" fill="#FFD700"/>
+            <ellipse cx="120" cy="96" rx="10" ry="7" fill="#FFAA99" opacity="0.5"/>
+            <path d="M124 84 Q148 80 142 96 Q124 94 124 84Z" fill="#FF8C00"/>
+            <path d="M124 90 Q142 89 141 95" stroke="#E67700" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="110" cy="82" r="8" fill="white"/>
+            <circle cx="112" cy="82" r="5" fill="#1a1a1a"/>
+            <circle cx="113.5" cy="80" r="2" fill="white"/>
+            <rect x="70" y="50" width="60" height="8" rx="2" fill="#1E3A5F"/>
+            <rect x="82" y="34" width="36" height="20" rx="4" fill="#2D5282"/>
+            <line x1="130" y1="54" x2="140" y2="68" stroke="#FFD700" stroke-width="2"/>
+            <circle cx="141" cy="70" r="4" fill="#FFD700"/>
+            <rect x="62" y="180" width="76" height="46" rx="6" fill="#2D5282"/>
+            <rect x="66" y="184" width="68" height="36" rx="3" fill="#3A6BC7"/>
+            <rect x="70" y="188" width="22" height="3" rx="1.5" fill="#FF8C00" opacity="0.9"/>
+            <rect x="70" y="194" width="38" height="3" rx="1.5" fill="#7EB3FF" opacity="0.7"/>
+            <rect x="70" y="200" width="30" height="3" rx="1.5" fill="#FFD700" opacity="0.9"/>
+            <rect x="70" y="206" width="20" height="3" rx="1.5" fill="#7EB3FF" opacity="0.5"/>
+            <rect x="92" y="200" width="2" height="10" rx="1" fill="white" opacity="0.9" class="cursor-blink"/>
+            <rect x="55" y="226" width="90" height="6" rx="3" fill="#1E3A5F"/>
+            <path d="M82 196 L72 204 L92 204Z" fill="#FF8C00"/>
+            <path d="M118 196 L108 204 L128 204Z" fill="#FF8C00"/>
+          </svg>
+          <div class="floating-badges">
+            <div class="fbadge fbadge-1">☕ Java</div>
+            <div class="fbadge fbadge-2">🌱 Spring</div>
+            <div class="fbadge fbadge-3">☁️ AWS</div>
+            <div class="fbadge fbadge-4">🗄️ JPA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>아래로 스크롤</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-label">ABOUT US</div>
+      <h2 class="section-title">코딩덕이 <span class="highlight">특별한</span> 이유</h2>
+      <p class="section-desc">
+        오리가 물 위를 우아하게 헤엄치듯, 코딩덕은 여러분이<br />
+        IT 세계를 자연스럽고 즐겁게 헤쳐나갈 수 있도록 함께합니다.
+      </p>
+      <!-- 이름 이야기 -->
+      <div class="name-story" data-aos>
+        <div class="name-story-duck">🦆</div>
+        <div class="name-story-text">
+          <strong>왜 이름이 코딩덕일까요?</strong>
+          <p>
+            개발자들 사이에는 <em>"러버덕 디버깅(Rubber Duck Debugging)"</em>이라는 비법이 있습니다.
+            막힌 코드를 해결할 때 책상 위 오리 인형에게 코드를 소리 내어 설명하다 보면,
+            스스로 문제를 발견하게 되는 거죠.
+            <br /><br />
+            <strong>코딩덕은 여러분의 그 오리가 되겠습니다.</strong>
+            막혀도 같이 생각하고, 달릴 때는 더 빨리 달릴 수 있도록.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-cards">
+        <div class="about-card" data-aos>
+          <div class="card-icon">🎯</div>
+          <h3>취업 중심 커리큘럼</h3>
+          <p>현업에서 실제로 쓰이는 기술 스택 중심으로 설계된 커리큘럼으로, 수료 후 바로 실무에 투입될 수 있는 역량을 키웁니다.</p>
+        </div>
+        <div class="about-card" data-aos>
+          <div class="card-icon">🚀</div>
+          <h3>실전 프로젝트</h3>
+          <p>배운 내용을 실제 프로젝트에 적용하며 포트폴리오를 쌓아가는 방식으로, 이론과 실전을 동시에 잡습니다.</p>
+        </div>
+        <div class="about-card" data-aos>
+          <div class="card-icon">☕</div>
+          <h3>백엔드 전문 강사진</h3>
+          <p>Java · Spring · JPA · AWS를 현업에서 직접 다루는 백엔드 개발자 출신 강사들이 실무 노하우를 그대로 전달합니다.</p>
+        </div>
+        <div class="about-card" data-aos>
+          <div class="card-icon">🤝</div>
+          <h3>커뮤니티 지원</h3>
+          <p>수강 후에도 지속적인 멘토링과 동문 네트워크를 통해 성장을 이어갈 수 있도록 지원합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI & 개발자 역할 ===== -->
+  <section class="ai-backend" id="ai-backend">
+    <div class="container">
+      <div class="section-label">AI 시대의 개발자</div>
+      <h2 class="section-title ai-title">개발자가 사라진다고요?<br /><span class="highlight">오히려 지금이 기회입니다.</span></h2>
+      <p class="section-desc ai-desc">
+        취업 준비생들이 가장 많이 하는 걱정, "AI가 개발자를 대체하면 어떡하지?"<br />
+        결론부터 말씀드리면, <strong>AI는 개발자를 없애는 게 아니라 역할을 바꿉니다.</strong>
+      </p>
+
+      <!-- 역할 변화 비교 -->
+      <div class="role-compare" data-aos>
+        <div class="role-col role-before">
+          <div class="role-col-title">
+            <span class="role-era">기존 개발자</span>
+          </div>
+          <ul class="role-list">
+            <li><span class="role-icon">📝</span> 코드를 한 줄 한 줄 직접 작성</li>
+            <li><span class="role-icon">🔧</span> 기능 구현 자체에 시간의 대부분 소비</li>
+            <li><span class="role-icon">📚</span> API 문서·보일러플레이트 반복 작성</li>
+            <li><span class="role-icon">🐛</span> 버그를 찾고 수정하는 데 집중</li>
+          </ul>
+        </div>
+        <div class="role-arrow">
+          <div class="arrow-icon">🤖</div>
+          <div class="arrow-line"></div>
+          <span>AI 도입</span>
+        </div>
+        <div class="role-col role-after">
+          <div class="role-col-title">
+            <span class="role-era era-new">AI 시대 개발자</span>
+          </div>
+          <ul class="role-list">
+            <li><span class="role-icon gold">🏗️</span> 시스템 설계·아키텍처에 집중</li>
+            <li><span class="role-icon gold">🔍</span> AI 생성 코드를 검증·개선·최적화</li>
+            <li><span class="role-icon gold">🎯</span> AI에게 정확한 요구사항 전달</li>
+            <li><span class="role-icon gold">⚡</span> 더 빠르게 더 많은 서비스 구축</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- AI 시대 수요 인사이트 -->
+      <div class="ai-insight" data-aos>
+        <div class="insight-cards">
+          <div class="insight-card">
+            <div class="insight-num">01</div>
+            <h4>AI가 개발 속도를 높이면</h4>
+            <p>더 많은 서비스가 만들어지고, 그 서비스를 운영·유지·확장할 <strong>더 많은 개발자</strong>가 필요해집니다.</p>
+          </div>
+          <div class="insight-card">
+            <div class="insight-num">02</div>
+            <h4>AI 코드는 검증이 필요합니다</h4>
+            <p>AI가 짠 코드가 왜 동작하는지 모르면 장애가 났을 때 손댈 수 없습니다. <strong>기초가 있는 개발자</strong>가 핵심입니다.</p>
+          </div>
+          <div class="insight-card">
+            <div class="insight-num">03</div>
+            <h4>'잘하는 개발자' 수요가 폭발 중</h4>
+            <p>단순 코더는 줄지만, <strong>아키텍처를 이해하고 AI를 활용하는 개발자</strong>의 연봉과 수요는 동시에 오르고 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI 역할 변화 → 코딩덕 커리큘럼 연결 -->
+      <div class="ai-connect" data-aos>
+        <div class="connect-header">
+          <span class="connect-label">코딩덕이 이렇게 준비시킵니다</span>
+          <p>위의 역할 변화, 코딩덕 커리큘럼이 정확히 커버합니다.</p>
+        </div>
+        <div class="connect-grid">
+          <div class="connect-row">
+            <div class="connect-need"><span>🏗️</span> 시스템 설계 · 아키텍처</div>
+            <div class="connect-sep">→</div>
+            <div class="connect-course"><strong>Spring Boot</strong> 계층형 아키텍처, 도메인 설계 패턴</div>
+          </div>
+          <div class="connect-row">
+            <div class="connect-need"><span>🔍</span> AI 코드 검증 · 최적화</div>
+            <div class="connect-sep">→</div>
+            <div class="connect-course"><strong>Java 코어 + JPA</strong> 동작 원리 완전 이해, N+1 해결</div>
+          </div>
+          <div class="connect-row">
+            <div class="connect-need"><span>🎯</span> 정확한 기술 요구사항 정의</div>
+            <div class="connect-sep">→</div>
+            <div class="connect-course"><strong>REST API 설계</strong> + Swagger 문서화 실습</div>
+          </div>
+          <div class="connect-row">
+            <div class="connect-need"><span>⚡</span> 빠른 서비스 배포 · 운영</div>
+            <div class="connect-sep">→</div>
+            <div class="connect-course"><strong>AWS + Docker</strong> + GitHub Actions CI/CD 구축</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-cta-box" data-aos>
+        <div class="ai-cta-text">
+          <strong>코딩덕의 결론</strong><br />
+          AI 시대일수록 <span class="highlight">탄탄한 백엔드 기초</span>를 갖춘 개발자가 살아남습니다.<br />
+          코딩덕은 바로 그 기초를 가르칩니다.
+        </div>
+        <a href="#programs" class="btn btn-primary">백엔드 과정 보러가기 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAMS (백엔드 단일 트랙) ===== -->
+  <section class="programs" id="programs">
+    <div class="container">
+      <div class="section-label">PROGRAMS & CURRICULUM</div>
+      <h2 class="section-title">코딩덕 <span class="highlight">강의 과정</span></h2>
+      <p class="section-desc">백엔드 취업에 필요한 모든 기술을 단계별로 완주합니다.</p>
+
+      <div class="single-track-card" data-aos>
+        <div class="track-top">
+          <div class="track-badge track-badge-job">취업 준비생</div>
+          <div class="track-header">
+            <div class="track-icon-wrap">🦆</div>
+            <div>
+              <h3>프로 코딩덕</h3>
+              <p class="track-desc">
+                비전공자도 시작할 수 있는 <strong>백엔드 풀코스</strong>.<br />
+                Java 기초부터 AWS 배포까지, 취업에 필요한 모든 것을 4개월 안에 완성합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="full-roadmap">
+          <div class="road-step" data-aos>
+            <div class="road-dot dot-1">1</div>
+            <div class="road-content">
+              <h5>Java 기초 & 자료구조 · 알고리즘</h5>
+              <p class="road-desc">코딩 테스트와 기술 면접의 핵심 영역. 배열·스택·큐·트리·그래프·해시 등 CS 핵심 자료구조를 Java로 직접 구현하고, 시간 복잡도 분석부터 최적화까지 훈련합니다.</p>
+              <div class="road-tags">
+                <span class="tag-highlight">Java 8+</span>
+                <span>OOP</span>
+                <span>자료구조</span>
+                <span>알고리즘</span>
+                <span>코딩 테스트 대비</span>
+              </div>
+              <div class="road-badge-row">
+                <span class="interview-badge">🎯 기술 면접 핵심</span>
+                <span class="interview-badge">📝 코딩 테스트 직결</span>
+              </div>
+              <button class="road-toggle" aria-expanded="false">이 단계를 마치면 할 수 있어요 ▾</button>
+              <div class="road-extra">
+                <ul>
+                  <li>✅ LeetCode Easy~Medium 레벨 혼자 풀기</li>
+                  <li>✅ 기술 면접에서 "자료구조란?"에 자신 있게 답변</li>
+                  <li>✅ 시간 복잡도 O(n) vs O(log n) 즉시 계산</li>
+                  <li>✅ 네이버·카카오 코딩 테스트 1차 통과 수준 도달</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="road-step" data-aos>
+            <div class="road-dot dot-2">2</div>
+            <div class="road-content">
+              <h5>Spring Boot & JPA 백엔드 개발</h5>
+              <p class="road-desc">국내 백엔드 시장 표준 스택. RESTful API 설계부터 JPA로 DB를 다루는 방법까지 실습합니다. QueryDSL로 타입 안전한 쿼리를 작성하고, Spring Security + JWT로 인증·인가를 직접 구현합니다.</p>
+              <div class="road-tags">
+                <span class="tag-highlight">Spring Boot</span>
+                <span class="tag-highlight">JPA / Hibernate</span>
+                <span>QueryDSL</span>
+                <span>Spring Security</span>
+                <span>JWT</span>
+                <span>REST API</span>
+                <span>MySQL</span>
+                <span>Swagger</span>
+              </div>
+              <button class="road-toggle" aria-expanded="false">이 단계를 마치면 할 수 있어요 ▾</button>
+              <div class="road-extra">
+                <ul>
+                  <li>✅ Spring Boot REST API 서버 혼자 구축</li>
+                  <li>✅ JWT 인증·인가 시스템 처음부터 구현</li>
+                  <li>✅ 면접에서 "JPA N+1 문제"를 원리부터 해결책까지 설명</li>
+                  <li>✅ 실제 서비스 수준의 백엔드 API 설계 및 문서화</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="road-step" data-aos>
+            <div class="road-dot dot-3">3</div>
+            <div class="road-content">
+              <h5>현대 백엔드 기술 스택</h5>
+              <p class="road-desc">현업에서 실제로 사용하는 기술들을 체험합니다. Redis로 캐싱·세션 처리를 구현하고, 메시지 큐 개념으로 비동기 처리를 이해합니다. Kotlin과 Java를 비교하며 현대적인 코드 스타일도 익힙니다.</p>
+              <div class="road-tags">
+                <span class="tag-highlight">Redis</span>
+                <span>Kafka 개념</span>
+                <span>Kotlin 입문</span>
+                <span>비동기 처리</span>
+                <span>캐싱 전략</span>
+                <span>API 설계 패턴</span>
+              </div>
+              <button class="road-toggle" aria-expanded="false">이 단계를 마치면 할 수 있어요 ▾</button>
+              <div class="road-extra">
+                <ul>
+                  <li>✅ Redis 캐싱으로 API 응답 속도 대폭 개선</li>
+                  <li>✅ 비동기 이벤트 처리 아키텍처 설계 이해</li>
+                  <li>✅ Kotlin으로 더 간결하고 안전한 코드 작성</li>
+                  <li>✅ "Redis를 왜 쓰나요?" 면접 질문에 실전 경험으로 답변</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="road-step" data-aos>
+            <div class="road-dot dot-4">4</div>
+            <div class="road-content">
+              <h5>AWS 클라우드 배포 & DevOps</h5>
+              <p class="road-desc">EC2·RDS·S3로 실제 서비스를 배포하고, Docker로 컨테이너 환경을 구성합니다. GitHub Actions CI/CD 파이프라인을 직접 구축해 자동 빌드·배포를 경험합니다.</p>
+              <div class="road-tags">
+                <span class="tag-highlight">AWS (EC2 · RDS · S3)</span>
+                <span>Docker</span>
+                <span>GitHub Actions</span>
+                <span>CI/CD</span>
+                <span>Linux 기초</span>
+              </div>
+              <button class="road-toggle" aria-expanded="false">이 단계를 마치면 할 수 있어요 ▾</button>
+              <div class="road-extra">
+                <ul>
+                  <li>✅ 내가 만든 서비스를 실제 URL로 접속 가능하게 배포</li>
+                  <li>✅ GitHub에 push하면 자동으로 서버 반영되는 CI/CD 구축</li>
+                  <li>✅ Docker로 "내 PC에서만 된다"는 문제 완전 해소</li>
+                  <li>✅ 포트폴리오에 "직접 운영 중인 서비스" URL 첨부 가능</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="road-step" data-aos>
+            <div class="road-dot dot-5">5</div>
+            <div class="road-content">
+              <h5>팀 프로젝트 & 취업 코칭</h5>
+              <p class="road-desc">실제 팀 프로젝트로 완성도 높은 포트폴리오를 만듭니다. 이력서 피드백, 모의 기술 면접, 코딩 테스트 집중 훈련으로 최종 취업까지 함께합니다.</p>
+              <div class="road-tags">
+                <span class="tag-highlight">팀 프로젝트</span>
+                <span>코드 리뷰</span>
+                <span>기술 면접 대비</span>
+                <span>이력서 피드백</span>
+                <span>포트폴리오 완성</span>
+              </div>
+              <div class="road-badge-row">
+                <span class="interview-badge">💼 취업 집중 코칭</span>
+              </div>
+              <button class="road-toggle" aria-expanded="false">이 단계를 마치면 할 수 있어요 ▾</button>
+              <div class="road-extra">
+                <ul>
+                  <li>✅ 배포된 실서비스 포트폴리오 GitHub 공개</li>
+                  <li>✅ 모의 기술 면접에서 30분 이상 막힘 없이 답변</li>
+                  <li>✅ 이력서 한 줄에 실제 숫자("트래픽 N배 개선") 기입</li>
+                  <li>✅ IT 기업 서류·코딩 테스트·기술 면접 전 과정 준비 완료</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="track-info-row">
+          <div class="track-info-item"><span class="info-icon">🕐</span> 주 5회 · 4개월 과정</div>
+          <div class="track-info-item"><span class="info-icon">👥</span> 소수 정예 운영</div>
+          <div class="track-info-item"><span class="info-icon">💼</span> 백엔드 취업 집중 코칭</div>
+        </div>
+      </div>
+
+      <!-- DS/Algo Highlight Banner -->
+      <div class="algo-banner" data-aos>
+        <div class="algo-banner-icon">🧩</div>
+        <div class="algo-banner-text">
+          <strong>자료구조 & 알고리즘은 기술 면접의 핵심입니다</strong>
+          <p>네이버·카카오·라인 등 국내 주요 IT 기업의 기술 면접과 코딩 테스트에서 자료구조·알고리즘은 필수 관문입니다. 코딩덕 프로 과정은 취업 실전에 맞춘 문제 풀이 훈련을 커리큘럼에 포함합니다.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== INTERACTIVE QUIZ ===== -->
+  <section class="quiz-section" id="quiz">
+    <div class="container">
+      <div class="section-label">SELF CHECK</div>
+      <h2 class="section-title">백엔드 개발자,<br /><span class="highlight">나에게 맞을까요?</span></h2>
+      <p class="section-desc">5가지 질문으로 지금 당장 확인해보세요.</p>
+
+      <div class="quiz-wrapper">
+        <!-- Progress -->
+        <div class="quiz-progress-wrap">
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" id="quizFill"></div>
+          </div>
+          <span class="quiz-progress-text" id="quizProgressText">0 / 5</span>
+        </div>
+
+        <!-- Questions -->
+        <div class="quiz-stage" id="quizStage">
+          <div class="quiz-card active" data-index="0">
+            <div class="quiz-q-num">Q1</div>
+            <p class="quiz-q-text">무언가가 어떻게 작동하는지, <strong>"왜?" 라는 이유</strong>를 끝까지 파고드는 편이다.</p>
+            <div class="quiz-btns">
+              <button class="quiz-btn yes" data-q="0" data-a="yes">✅ 그렇다</button>
+              <button class="quiz-btn no"  data-q="0" data-a="no">❌ 아니다</button>
+            </div>
+          </div>
+          <div class="quiz-card" data-index="1">
+            <div class="quiz-q-num">Q2</div>
+            <p class="quiz-q-text">앱이나 웹 서비스를 쓸 때 <strong>"이 데이터가 어디서 오는 걸까?"</strong> 라는 생각을 해본 적 있다.</p>
+            <div class="quiz-btns">
+              <button class="quiz-btn yes" data-q="1" data-a="yes">✅ 그렇다</button>
+              <button class="quiz-btn no"  data-q="1" data-a="no">❌ 아니다</button>
+            </div>
+          </div>
+          <div class="quiz-card" data-index="2">
+            <div class="quiz-q-num">Q3</div>
+            <p class="quiz-q-text">반복되는 작업이 있으면 <strong>자동화할 방법</strong>을 찾는 편이다.</p>
+            <div class="quiz-btns">
+              <button class="quiz-btn yes" data-q="2" data-a="yes">✅ 그렇다</button>
+              <button class="quiz-btn no"  data-q="2" data-a="no">❌ 아니다</button>
+            </div>
+          </div>
+          <div class="quiz-card" data-index="3">
+            <div class="quiz-q-num">Q4</div>
+            <p class="quiz-q-text">오류가 생겼을 때 포기하기보다 <strong>원인을 찾아 해결</strong>할 때까지 붙잡는 편이다.</p>
+            <div class="quiz-btns">
+              <button class="quiz-btn yes" data-q="3" data-a="yes">✅ 그렇다</button>
+              <button class="quiz-btn no"  data-q="3" data-a="no">❌ 아니다</button>
+            </div>
+          </div>
+          <div class="quiz-card" data-index="4">
+            <div class="quiz-q-num">Q5</div>
+            <p class="quiz-q-text">새로운 기술이나 지식을 배우는 것에 <strong>거부감이 없다</strong>.</p>
+            <div class="quiz-btns">
+              <button class="quiz-btn yes" data-q="4" data-a="yes">✅ 그렇다</button>
+              <button class="quiz-btn no"  data-q="4" data-a="no">❌ 아니다</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result -->
+        <div class="quiz-result" id="quizResult">
+          <div class="result-duck" id="resultDuck">🦆</div>
+          <h3 class="result-title" id="resultTitle"></h3>
+          <p class="result-desc" id="resultDesc"></p>
+          <div class="result-score" id="resultScore"></div>
+          <button class="btn btn-outline quiz-retry" id="quizRetry">다시 해보기</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="why" id="testimonials">
+    <div class="why-bg"></div>
+    <div class="container">
+      <div class="section-label light">VOICES</div>
+      <h2 class="section-title light" style="text-align:center;">수강생 <span class="highlight-light">이야기</span></h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.7);text-align:center;margin-bottom:40px;">코딩덕과 함께 변화한 분들의 진짜 경험을 들어보세요.</p>
+      <div class="testimonial-cards">
+        <div class="testimonial-card" data-aos>
+          <div class="testimonial-text">"Spring과 JPA를 처음 접했는데 강사님이 현업 사례로 설명해 주셔서 바로 이해됐어요. AWS 배포까지 직접 해보니 포트폴리오에 자신 있게 쓸 수 있게 됐습니다!"</div>
+          <div class="testimonial-author">
+            <div class="author-avatar">🦆</div>
+            <div>
+              <strong>이서연</strong>
+              <span>25세 · 프로 코딩덕 수료 → 백엔드 개발자 취업</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos>
+          <div class="testimonial-text">"자료구조·알고리즘 특강 덕분에 카카오 코딩 테스트를 통과했어요. 기술 면접에서 JPA N+1 문제를 설명했더니 면접관이 바로 합격시켜줬습니다!"</div>
+          <div class="testimonial-author">
+            <div class="author-avatar">🦆</div>
+            <div>
+              <strong>박지호</strong>
+              <span>28세 · 프로 코딩덕 수료 → IT 기업 백엔드 개발자</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos>
+          <div class="testimonial-text">"QueryDSL이랑 Redis는 다른 곳에서는 잘 안 가르쳐주는데, 코딩덕에서 실제 프로젝트에 적용하며 배우니까 면접 때 차별화 포인트가 됐어요."</div>
+          <div class="testimonial-author">
+            <div class="author-avatar">🦆</div>
+            <div>
+              <strong>김태현</strong>
+              <span>27세 · 프로 코딩덕 수료 → 핀테크 스타트업 백엔드</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo footer-logo">
+            <div class="duck-icon-small">
+              <svg viewBox="0 0 48 48" fill="none">
+                <ellipse cx="24" cy="30" rx="14" ry="10" fill="#FFD700"/>
+                <circle cx="24" cy="18" r="9" fill="#FFD700"/>
+                <ellipse cx="28" cy="30" rx="6" ry="3" fill="#FFC200" transform="rotate(-10 28 30)"/>
+                <path d="M30 17 Q36 15 34 21 Q30 20 30 17Z" fill="#FF8C00"/>
+                <circle cx="21" cy="16" r="1.5" fill="#1a1a1a"/>
+              </svg>
+            </div>
+            <span class="logo-text">코딩덕</span>
+          </div>
+          <p>코딩하는 오리처럼, 우아하고 즐겁게.<br />IT 교육의 새로운 기준을 만들어 갑니다.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>강의 과정</h4>
+            <ul>
+              <li><a href="#programs">프로 코딩덕</a></li>
+              <li><a href="#programs">커리큘럼</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>회사</h4>
+            <ul>
+              <li><a href="#about">회사 소개</a></li>
+              <li><a href="#about">강사 소개</a></li>
+              <li><a href="#">채용 공고</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>안내</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 코딩덕(CodingDuck). All rights reserved.</p>
+        <p>대표: 홍길동 · 사업자등록번호: 000-00-00000 · 서울특별시 강남구 테헤란로 123</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== DUCK GAME ===== -->
+  <canvas id="duckGameCanvas" style="display:none;position:fixed;top:0;left:0;z-index:9999;cursor:none;"></canvas>
+
+  <!-- 모바일 D-pad -->
+  <div id="duckDpad">
+    <div class="dpad-grid">
+      <div></div>
+      <button class="dpad-btn" data-key="ArrowUp">▲</button>
+      <div></div>
+      <button class="dpad-btn" data-key="ArrowLeft">◀</button>
+      <button class="dpad-btn dpad-quack" data-key=" ">꽥!</button>
+      <button class="dpad-btn" data-key="ArrowRight">▶</button>
+      <div></div>
+      <button class="dpad-btn" data-key="ArrowDown">▼</button>
+      <div></div>
+    </div>
+    <button class="dpad-exit" id="dpadExit">✕ 종료</button>
+  </div>
+  <div id="duckHint" style="
+    position:fixed;bottom:100px;left:50%;transform:translateX(-50%);
+    background:rgba(30,58,95,0.95);color:white;padding:12px 24px;border-radius:50px;
+    font-size:14px;font-weight:600;z-index:10000;transition:opacity 0.5s;opacity:0;pointer-events:none;
+    white-space:nowrap;
+  ">WASD / 방향키로 이동 &nbsp;·&nbsp; Space = 꽥! &nbsp;·&nbsp; ESC = 종료</div>
+
+  <!-- Duck Mode floating button -->
+  <button id="duckModeBtn" title="오리 탐험 모드" aria-label="오리 탐험 모드 켜기">
+    <span class="duck-btn-icon">🦆</span>
+    <span class="duck-btn-text">오리 탐험</span>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
